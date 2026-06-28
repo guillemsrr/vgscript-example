@@ -1,0 +1,144 @@
+{
+  "schemaVersion": 1,
+  "scriptId": "63629b03-3b88-468f-804f-d961bbe0ff09",
+  "scriptPath": "F:/vgscript-example\\S1_Example.vgs",
+  "sceneKey": "S1",
+  "sceneName": "Scene 1. Example",
+  "generatedAt": "2026-06-28T09:35:14.512574300+00:00",
+  "entries": [
+    {
+      "currentCode": "A1",
+      "hash": "E8FD14172C44417899537914C0076001",
+      "lines": [
+        "Scene1Handler"
+      ]
+    },
+    {
+      "currentCode": "T1",
+      "hash": "B44DA988BD1D4DBB970F544F3DA42A89",
+      "lines": [
+        "I'm the narrator, this is the first text.",
+        "A second line of the text.",
+        "And now the character is going to talk."
+      ],
+      "character": "Narrator"
+    },
+    {
+      "currentCode": "T2",
+      "hash": "DD814F21AE524BFA8D8CB8EF55BBF003",
+      "lines": [
+        "Hello? ->(Timer{2})",
+        "What is happening? ->(Animation{arms-up}, Timer{3})",
+        "Is anybody there! ||(A2)",
+        "Anybody!? ||(A2)",
+        "I don't know what to do. ->(Animation{arms-down}, Timer{2}) ->(T3)"
+      ],
+      "character": "Character"
+    },
+    {
+      "currentCode": "A2",
+      "hash": "A4DAA44BDE7E4B27B8D671699DA50656",
+      "lines": [
+        "Effect{shake}"
+      ]
+    },
+    {
+      "currentCode": "T3",
+      "hash": "3CF3FEFA64964657AC9B42E236983DE3",
+      "lines": [
+        "The character was desperate.",
+        "Suddenly, a sound of something cracking came from behind. ||(Event{A1, onLaptop-Close})",
+        "A laptop fall from somewhere and hit the floor.",
+        "The screen was broken, but it was still on. ||(Event{A1, onLaptop-Grab})",
+        "The character grabbed the laptop. The screen showed text. This text. ->(D1)"
+      ],
+      "character": "Narrator"
+    },
+    {
+      "currentCode": "D1",
+      "hash": "A39041B6E15847A68046D26230DBFB64",
+      "lines": [
+        "'This is stupid.' ->(T4)",
+        "{!repeat} 'There's a text on the screen.' ->(T5)",
+        "if(T5) {hold} I'm the narrator, this is the first text.->(T6)"
+      ]
+    },
+    {
+      "currentCode": "T4",
+      "hash": "66F5DD8DE3914B14852EF527F7E04C24",
+      "lines": [
+        "This is stupid.",
+        "I'm not going to read it. I'm not going to read it. ->(D1)"
+      ],
+      "character": "Character"
+    },
+    {
+      "currentCode": "T5",
+      "hash": "24B7EEA5785F4F78B265CEC42CEE6BE3",
+      "lines": [
+        "There's a text on the screen. ->(D1)"
+      ],
+      "character": "Character"
+    },
+    {
+      "currentCode": "T6",
+      "hash": "62247BB755BE4D63A06413E869253ED7",
+      "lines": [
+        "I'm the narrator, this is the first text. ->(Timer{2})",
+        "What? ->(D2)"
+      ],
+      "character": "Character"
+    },
+    {
+      "currentCode": "D2",
+      "hash": "70EDAF2CA8414D048880EDD02457F8AF",
+      "lines": [
+        "Is this made in VgScript? ->(T7)",
+        "{!repeat} I'm not the narrator! ->(T8)",
+        "Who am I? ->(T9)"
+      ]
+    },
+    {
+      "currentCode": "T7",
+      "hash": "22581329EA734574AAC89E4FCCA6C399",
+      "lines": [
+        "The screen answered before the character could finish asking: 'Yes. Every word, every gasp, every crack behind you — lines in a .vgs file.' ->(Timer{2})",
+        "'The room is a scene. The laptop is a prop. You are a Talk block with very good lighting.' ->(Timer{3})",
+        "A pale watermark blinked at the bottom of the broken screen. ->(Timer{1})",
+        "'Buy the plugin.' ||(A2)",
+        "The character laughed once, then went very still. If all of it was script... who was reading whose lines? ->(T9)"
+      ],
+      "character": "Narrator"
+    },
+    {
+      "currentCode": "T8",
+      "hash": "35100E1577CD40C0BF54512F01877686",
+      "lines": [
+        "'I'm NOT the narrator!' — but the words had already printed themselves on the screen a half-second before the mouth moved. ->(Timer{2})",
+        "Read the denial. Saying it aloud made it narration. Narrating it made it true, then false, then a loop with no seam. ||(A2)",
+        "The laptop dimmed, then brightened on its very first line again, patient, eternal. ->(Animation{arms-up}, Timer{2})",
+        "Hello? ->(T2)"
+      ],
+      "character": "Narrator"
+    },
+    {
+      "currentCode": "T9",
+      "hash": "746313173FAF4373BED9D957F20C3514",
+      "lines": [
+        "'Who am I?' the character asked, and for the first time the screen had no line waiting. ->(Timer{2})",
+        "So they wrote one. The text and the mouth moved together now, no delay between them. The reader had become the narration. ->(Timer{3})",
+        "The new Narrator — the one who used to be afraid — set the laptop down gently, screen still glowing for whoever came next. ->(Timer{2})",
+        "Somewhere just ahead, another character was about to whisper 'Hello?' into a room they were sure was empty. ->(Timer{2})",
+        "And this Narrator smiled, and passed the story along. ->(A3)"
+      ],
+      "character": "Narrator"
+    },
+    {
+      "currentCode": "A3",
+      "hash": "82CC6438AB894BEFB3192BB755154B22",
+      "lines": [
+        "Event{A1, End} ->(Hash{EE0DA196164741D98C71464AB8496FA7 })"
+      ]
+    }
+  ]
+}

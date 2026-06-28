@@ -1,0 +1,17 @@
+{
+  "schemaVersion": 1,
+  "scriptId": "ded36c8b-a3ff-448c-b633-7adcdd4f4dad",
+  "scriptPath": "F:/vgscript-example\\S2_Example2.vgs",
+  "sceneKey": "S2",
+  "sceneName": "Example 2",
+  "generatedAt": "2026-06-28T09:18:22.005919700+00:00",
+  "entries": [
+    {
+      "currentCode": "T1",
+      "hash": "EE0DA196164741D98C71464AB8496FA7",
+      "lines": [
+        "The End."
+      ]
+    }
+  ]
+}

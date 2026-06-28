@@ -1,0 +1,81 @@
+[S1] Scene 1. Example
+
+[A1] Scene1Handler
+
+[P] Narrator
+
+[T1]
+[1] I'm the narrator, this is the first text.
+[2] A second line of the text. //and this is a comment.
+[3] And now the character is going to talk.
+
+[P] Character
+
+[T2]
+[1] Hello? ->(Timer{2}) // Will wait for two seconds and then continue.
+[2] What is happening? ->(Animation{arms-up}, Timer{3}) //Two actions after the text.
+[3] Is anybody there! ||(A2) //parallel action, right when the text is displayed.
+[4] Anybody!? ||(A2) //reusing the same separated action.
+[5] I don't know what to do. ->(Animation{arms-down}, Timer{2}) ->(T3)
+
+[A2] Effect{shake}
+
+[P] Narrator
+
+[T3]
+[1] The character was desperate.
+[2] Suddenly, a sound of something cracking came from behind. ||(Event{A1, onLaptop-Close})
+[3] A laptop fall from somewhere and hit the floor.
+[4] The screen was broken, but it was still on. ||(Event{A1, onLaptop-Grab})
+[5] The character grabbed the laptop. The screen showed text. This text. ->(D1)
+
+[P] Character
+
+[D1]
+[1] 'This is stupid.' ->(T4)
+[2] {!repeat} 'There's a text on the screen.' ->(T5)
+[3] if(T5) {hold} I'm the narrator, this is the first text.->(T6)
+
+[P] Character
+
+[T4]
+[1] This is stupid.
+[2] I'm not going to read it. I'm not going to read it. ->(D1)
+
+[T5]
+[1] There's a text on the screen.
+[2] Maybe I should read it. ->(D1)
+
+[T6]
+[1] I'm the narrator, this is the first text. ->(Timer{2})
+[2] What? ->(D2)
+
+[D2]
+[1] Is this made in VgScript? ->(T7)
+[2] {!repeat} I'm not the narrator! ->(T8)
+[3] Who am I? ->(T9)
+
+[P] Narrator
+
+[T7]
+[1] The screen answered before the character could finish asking: 'Yes. Every word, every gasp, every crack behind you — lines in a .vgs file.' ->(Timer{2})
+[2] 'The room is a scene. The laptop is a prop. You are a Talk block with very good lighting.' ->(Timer{3})
+[3] A pale watermark blinked at the bottom of the broken screen. ->(Timer{1})
+[4] 'Buy the plugin.' ||(A2) //the fourth wall shivers.
+[5] The character laughed once, then went very still. If all of it was script... who was reading whose lines? ->(T9)
+
+[T8]
+[1] 'I'm NOT the narrator!' — but the words had already printed themselves on the screen a half-second before the mouth moved. ->(Timer{2})
+[2] Read the denial. Saying it aloud made it narration. Narrating it made it true, then false, then a loop with no seam. ||(A2)
+[3] The laptop dimmed, then brightened on its very first line again, patient, eternal. ->(Animation{arms-up}, Timer{2})
+[4] Hello? ->(T2)
+
+[T9]
+[1] 'Who am I?' the character asked, and for the first time the screen had no line waiting. ->(Timer{2})
+[2] So they wrote one. The text and the mouth moved together now, no delay between them. The reader had become the narration. ->(Timer{3})
+[3] The new Narrator — the one who used to be afraid — set the laptop down gently, screen still glowing for whoever came next. ->(Timer{2})
+[4] Somewhere just ahead, another character was about to whisper 'Hello?' into a room they were sure was empty. ->(Timer{2})
+[5] And this Narrator smiled, and passed the story along. ->(A3)
+
+
+[A3] Event{A1, End} ->(Hash{EE0DA196164741D98C71464AB8496FA7 /*Example 2 S2-T1*/})
