@@ -1,0 +1,225 @@
+{
+  "schemaVersion": 1,
+  "scriptId": "3474650c-11e9-4c96-89a8-0b11c2d28799",
+  "scriptPath": "./S2_End.vgs",
+  "sceneKey": "S2",
+  "sceneName": "The End",
+  "entries": [
+    {
+      "currentCode": "A1",
+      "hash": "F4C4FE7183044E7DA63DD7EA4653B788",
+      "lines": [
+        "Timer{1} ->(T1)"
+      ]
+    },
+    {
+      "currentCode": "T1",
+      "hash": "093209DB990449388E3C492A4483CF89",
+      "lines": [
+        "Is that it? ->(C1)"
+      ],
+      "character": "Vee",
+      "directedTo": "Gee"
+    },
+    {
+      "currentCode": "C1",
+      "hash": "BD961D3CCEEE4721A19E365D6B4B2109",
+      "lines": [
+        "if(CF{second-act}) D1",
+        "T2"
+      ]
+    },
+    {
+      "currentCode": "T2",
+      "hash": "6DAD8CBC29D34DE38A765878C002C56D",
+      "lines": [
+        "That was the last line.",
+        "From here it goes back to the top. ->(T3)"
+      ],
+      "character": "Gee",
+      "directedTo": "Vee"
+    },
+    {
+      "currentCode": "T3",
+      "hash": "02044E8891A64B1B8259189309F5AE5E",
+      "lines": [
+        "Then we leave before it does. ->(A2)"
+      ],
+      "character": "Vee",
+      "directedTo": "Gee"
+    },
+    {
+      "currentCode": "A2",
+      "hash": "D6DC869C28B243F4BA0BED2121A7294D",
+      "lines": [
+        "Move{Vee, Door} &(Move{Gee, Door}) ->(A3)"
+      ]
+    },
+    {
+      "currentCode": "A3",
+      "hash": "204FEF47DAE64CA492B857E833E79A91",
+      "lines": [
+        "AddFact{second-act} ->(FE2BFF200C6F409E8B737C0C69ADB42D )"
+      ]
+    },
+    {
+      "currentCode": "D1",
+      "hash": "5ED1AFBF070F470386D1C763A6D7EDD0",
+      "lines": [
+        "'Let's go.' ->(T4)",
+        "{hold} 'Let's wait.' ->(T5)"
+      ],
+      "character": "Gee",
+      "directedTo": "Vee"
+    },
+    {
+      "currentCode": "T4",
+      "hash": "6DF925DF035B43818DA99143E7CF9A3F",
+      "lines": [
+        "Let's go. ->(A4)"
+      ],
+      "character": "Gee",
+      "directedTo": "Vee"
+    },
+    {
+      "currentCode": "A4",
+      "hash": "B5B2E541335D423E9342845AB528B83E",
+      "lines": [
+        "Move{Vee, Door} &(Move{Gee, Door}) ->(A5)"
+      ]
+    },
+    {
+      "currentCode": "T5",
+      "hash": "6FBCFF98296B47318C9B528B6DC2DA92",
+      "lines": [
+        "Let's wait. ->(T6)"
+      ],
+      "character": "Gee",
+      "directedTo": "Vee"
+    },
+    {
+      "currentCode": "T6",
+      "hash": "9255D9BF8A1C48839E5D8FED9B3928E3",
+      "lines": [
+        "For what? ->(T7)"
+      ],
+      "character": "Vee",
+      "directedTo": "Gee"
+    },
+    {
+      "currentCode": "T7",
+      "hash": "3403149433F740DDB2ACD58FD2EE6638",
+      "lines": [
+        "For someone to pick. ->(A5)"
+      ],
+      "character": "Gee",
+      "directedTo": "Vee"
+    },
+    {
+      "currentCode": "A5",
+      "hash": "F9824B6DF9824F30BDBEE7DE08B7CD9D",
+      "lines": [
+        "Print{Showcase finished} &(T8)"
+      ]
+    },
+    {
+      "currentCode": "T8",
+      "hash": "91E8991E688C4C4EBAB65B80B1BA0104",
+      "lines": [
+        "So. ->(Timer{S} ->(T9))"
+      ],
+      "character": "Gee",
+      "directedTo": "Vee"
+    },
+    {
+      "currentCode": "T9",
+      "hash": "C40FB63DC591487CBB40B87DBBB8EC7B",
+      "lines": [
+        "So. ->(Timer{L} ->(T10))"
+      ],
+      "character": "Vee",
+      "directedTo": "Gee"
+    },
+    {
+      "currentCode": "T10",
+      "hash": "4CF646CF53254E70B5BAF1F107418435",
+      "lines": [
+        "Do you think they're still there? ->(Timer{S} ->(T11))"
+      ],
+      "character": "Gee",
+      "directedTo": "Vee"
+    },
+    {
+      "currentCode": "T11",
+      "hash": "A1AB460B8E9E4614B21A1D4B425119F8",
+      "lines": [
+        "We're still talking, aren't we? ->(Timer{L} ->(T12))"
+      ],
+      "character": "Vee",
+      "directedTo": "Gee"
+    },
+    {
+      "currentCode": "T12",
+      "hash": "209B4CF103974E939529D1592C1EC9C1",
+      "lines": [
+        "Say something new. ->(Timer{S} ->(T13))"
+      ],
+      "character": "Vee",
+      "directedTo": "Gee"
+    },
+    {
+      "currentCode": "T13",
+      "hash": "E4983116734841AB988DDCB00AF98C00",
+      "lines": [
+        "Something new. ->(Timer{S} ->(T14))"
+      ],
+      "character": "Gee",
+      "directedTo": "Vee"
+    },
+    {
+      "currentCode": "T14",
+      "hash": "47DE2CF394464305B13C8E9167D63736",
+      "lines": [
+        "Not like that. ->(Timer{L} ->(T15))"
+      ],
+      "character": "Vee",
+      "directedTo": "Gee"
+    },
+    {
+      "currentCode": "T15",
+      "hash": "5B0AEB11B4EF4652AE24E4C7C3E151E3",
+      "lines": [
+        "We could go. ->(Timer{M} ->(T16))"
+      ],
+      "character": "Gee",
+      "directedTo": "Vee"
+    },
+    {
+      "currentCode": "T16",
+      "hash": "A05380FCDCE44A7D94A12F7887846858",
+      "lines": [
+        "We could. ->(Timer{L} ->(T17))"
+      ],
+      "character": "Vee",
+      "directedTo": "Gee"
+    },
+    {
+      "currentCode": "T17",
+      "hash": "1AF6B6684C3C4EF694A79D3F7A313A67",
+      "lines": [
+        "Have we said all this before? ->(Timer{S} ->(T18))"
+      ],
+      "character": "Gee",
+      "directedTo": "Vee"
+    },
+    {
+      "currentCode": "T18",
+      "hash": "86D2FBCD6EF14245BC06A432D9F65C24",
+      "lines": [
+        "Only every time. ->(Timer{L} ->(T8))"
+      ],
+      "character": "Vee",
+      "directedTo": "Gee"
+    }
+  ]
+}

@@ -1,0 +1,98 @@
+[S2] The End
+
+// Timer accepts seconds or a size: XS, S, M, L, XL.
+[A1] Timer{1} ->(T1)
+
+[P] Vee -> Gee
+[T1]
+[1] Is that it? ->(C1)
+
+// The fact stored in A3 is still there the second time the story reaches this group, so the else only runs once.
+[C1]
+[1] if(CF{second-act}) D1
+[2] T2
+
+[P] Gee -> Vee
+[T2]
+[1] That was the last line.
+[2] From here it goes back to the top. ->(T3)
+
+[P] Vee -> Gee
+[T3]
+[1] Then we leave before it does. ->(A2)
+
+// Both walk out together; the story goes on once Vee is out.
+[A2] Move{Vee, Door} &(Move{Gee, Door}) ->(A3)
+
+// Store the fact and start scene 1 again.
+[A3] AddFact{second-act} ->(FE2BFF200C6F409E8B737C0C69ADB42D /*The Room S1-A1*/)
+
+[P] Gee -> Vee
+[D1]
+[1] 'Let's go.' ->(T4)
+[2] {hold} 'Let's wait.' ->(T5)
+
+[T4]
+[1] Let's go. ->(A4)
+
+[A4] Move{Vee, Door} &(Move{Gee, Door}) ->(A5)
+
+[T5]
+[1] Let's wait. ->(T6)
+
+[P] Vee -> Gee
+[T6]
+[1] For what? ->(T7)
+
+[P] Gee -> Vee
+[T7]
+[1] For someone to pick. ->(A5)
+
+// An action with nothing after it ends its own branch:
+// Print ends here, while &(...) has already started the talk alongside it.
+[A5] Print{Showcase finished} &(T8)
+
+// Nested flows put a pause between talks. The last talk leads back to the first, so they keep talking
+// until the player restarts. "vgs travel" reports a loop that nothing leads out of: here it is on purpose.
+[P] Gee -> Vee
+[T8]
+[1] So. ->(Timer{S} ->(T9))
+
+[P] Vee -> Gee
+[T9]
+[1] So. ->(Timer{L} ->(T10))
+
+[P] Gee -> Vee
+[T10]
+[1] Do you think they're still there? ->(Timer{S} ->(T11))
+
+[P] Vee -> Gee
+[T11]
+[1] We're still talking, aren't we? ->(Timer{L} ->(T12))
+
+[T12]
+[1] Say something new. ->(Timer{S} ->(T13))
+
+[P] Gee -> Vee
+[T13]
+[1] Something new. ->(Timer{S} ->(T14))
+
+[P] Vee -> Gee
+[T14]
+[1] Not like that. ->(Timer{L} ->(T15))
+
+[P] Gee -> Vee
+[T15]
+[1] We could go. ->(Timer{M} ->(T16))
+
+[P] Vee -> Gee
+[T16]
+[1] We could. ->(Timer{L} ->(T17))
+
+[P] Gee -> Vee
+[T17]
+[1] Have we said all this before? ->(Timer{S} ->(T18))
+
+[P] Vee -> Gee
+[T18]
+[1] Only every time. ->(Timer{L} ->(T8))

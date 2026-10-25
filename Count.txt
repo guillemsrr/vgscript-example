@@ -1,0 +1,4 @@
+Texts: 107
+Text Lines Counter: 131
+Decisions Counter: 7
+Decision Lines Counter: 23

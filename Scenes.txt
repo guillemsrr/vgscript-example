@@ -1,4 +1,4 @@
-//Example Scenes.txt
+// Scenes in play order. Used by the vgs CLI, the IDE extensions and the Unreal importer.
 
-S1_Example.vgs
-S2_Example2.vgs
+S1_Room.vgs
+S2_End.vgs

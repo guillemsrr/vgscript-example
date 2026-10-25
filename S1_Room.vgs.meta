@@ -1,0 +1,1028 @@
+{
+  "schemaVersion": 1,
+  "scriptId": "81df256e-6239-4993-8d98-90bbea8d2de8",
+  "scriptPath": "./S1_Room.vgs",
+  "sceneKey": "S1",
+  "sceneName": "The Room",
+  "entries": [
+    {
+      "currentCode": "A1",
+      "hash": "FE2BFF200C6F409E8B737C0C69ADB42D",
+      "lines": [
+        "RoomHandler &(C1)"
+      ]
+    },
+    {
+      "currentCode": "C1",
+      "hash": "D5726D294DB9401195209EA55D56EA39",
+      "lines": [
+        "if(CF{second-act} && CF{laptop-open}) A2",
+        "A3"
+      ]
+    },
+    {
+      "currentCode": "A2",
+      "hash": "4FDBBA1871334D3F95EB7EE22671160A",
+      "lines": [
+        "Trigger{A1, screen-on} ->(A3)"
+      ]
+    },
+    {
+      "currentCode": "A3",
+      "hash": "CA14A5243331420696AE1CACC16E168D",
+      "lines": [
+        "Move{Vee, Left} &(Move{Gee, Right}) ->(T1)"
+      ]
+    },
+    {
+      "currentCode": "T1",
+      "hash": "10E4E15AFC3149ECA2EAFAF30A3E9CCE",
+      "lines": [
+        "Hi, Gee. ->(T2)"
+      ],
+      "character": "Vee",
+      "directedTo": "Gee"
+    },
+    {
+      "currentCode": "T2",
+      "hash": "C2AE9EB64F2547AEA2AD52FFB341115C",
+      "lines": [
+        "Hi, Vee. ->(T3)"
+      ],
+      "character": "Gee",
+      "directedTo": "Vee"
+    },
+    {
+      "currentCode": "T3",
+      "hash": "EF7A914EFE5249B98981BB1EC3FE9DFE",
+      "lines": [
+        "Are we early? ->(T4)"
+      ],
+      "character": "Vee",
+      "directedTo": "Gee"
+    },
+    {
+      "currentCode": "T4",
+      "hash": "082B559B381944C5B144893A6AF2BAF5",
+      "lines": [
+        "For what? ->(T5)"
+      ],
+      "character": "Gee",
+      "directedTo": "Vee"
+    },
+    {
+      "currentCode": "T5",
+      "hash": "A41EA1F4017448D2A6FC722FFE8742B4",
+      "lines": [
+        "I don't know. It's only us. ->(T6)"
+      ],
+      "character": "Vee",
+      "directedTo": "Gee"
+    },
+    {
+      "currentCode": "T6",
+      "hash": "0CA529D69ECC4697B552951371AD56DB",
+      "lines": [
+        "And a laptop. ->(T7)"
+      ],
+      "character": "Gee",
+      "directedTo": "Vee"
+    },
+    {
+      "currentCode": "T7",
+      "hash": "DE20B084E36A4A6389F707B44361DB51",
+      "lines": [
+        "Yes, and that.",
+        "So... should we wait? ->(T8)"
+      ],
+      "character": "Vee",
+      "directedTo": "Gee"
+    },
+    {
+      "currentCode": "T8",
+      "hash": "B57B1E81E38D4376877947205818380D",
+      "lines": [
+        "For what? ->(T9)"
+      ],
+      "character": "Gee",
+      "directedTo": "Vee"
+    },
+    {
+      "currentCode": "T9",
+      "hash": "744BFA6C1331460EA2142F31DABE3898",
+      "lines": [
+        "For whatever we're early for. ->(D1)"
+      ],
+      "character": "Vee",
+      "directedTo": "Gee"
+    },
+    {
+      "currentCode": "D1",
+      "hash": "840B91573943480FB43D6F2FE6EBB351",
+      "lines": [
+        "'We could come back later.' ->(T10)",
+        "'I think we've been here before.' ->(T12)",
+        "'What about the laptop?' ->(T16)",
+        "if(CF{second-act}) 'You're going to say the laptop is what we're early for.' ->(T18)"
+      ],
+      "character": "Gee",
+      "directedTo": "Vee"
+    },
+    {
+      "currentCode": "T10",
+      "hash": "AE347541199346B7B9AC655310453492",
+      "lines": [
+        "We could come back later. ->(T11)"
+      ],
+      "character": "Gee",
+      "directedTo": "Vee"
+    },
+    {
+      "currentCode": "T11",
+      "hash": "1A20BB80560E48CCA63A69ABECC56A01",
+      "lines": [
+        "And miss it? ->(T22)"
+      ],
+      "character": "Vee",
+      "directedTo": "Gee"
+    },
+    {
+      "currentCode": "T12",
+      "hash": "4DF2078520304CBF8A2A768424189FC4",
+      "lines": [
+        "I think we've been here before. ->(C2)"
+      ],
+      "character": "Gee",
+      "directedTo": "Vee"
+    },
+    {
+      "currentCode": "C2",
+      "hash": "0D41D4A598D24E818854153DD08A1277",
+      "lines": [
+        "if(CF{second-act}) T15",
+        "T13"
+      ]
+    },
+    {
+      "currentCode": "T13",
+      "hash": "D5E21DFBDE5F4F3281F3E2AC742D56B7",
+      "lines": [
+        "Why would you say that? ->(T14)"
+      ],
+      "character": "Vee",
+      "directedTo": "Gee"
+    },
+    {
+      "currentCode": "T14",
+      "hash": "59FDA9BE3B16464F81E93CCA48491915",
+      "lines": [
+        "I don't know why I said that. ->(T22)"
+      ],
+      "character": "Gee"
+    },
+    {
+      "currentCode": "T15",
+      "hash": "C28147ABB7F8429095B7A5B87A988345",
+      "lines": [
+        "Were we? ->(T22)"
+      ],
+      "character": "Vee",
+      "directedTo": "Gee"
+    },
+    {
+      "currentCode": "T16",
+      "hash": "AF43EAE2F9634F0882D75131ACDAE9F2",
+      "lines": [
+        "What about the laptop? ->(T17)"
+      ],
+      "character": "Gee",
+      "directedTo": "Vee"
+    },
+    {
+      "currentCode": "T17",
+      "hash": "82D5CD72FA5E4B1ABBD237E387DB5010",
+      "lines": [
+        "Maybe that's what we're early for. ->(C3)"
+      ],
+      "character": "Vee",
+      "directedTo": "Gee"
+    },
+    {
+      "currentCode": "T18",
+      "hash": "BF78CE7F88954B709AA4C6D823D8492A",
+      "lines": [
+        "You're going to say the laptop is what we're early for. ->(T19)"
+      ],
+      "character": "Gee",
+      "directedTo": "Vee"
+    },
+    {
+      "currentCode": "T19",
+      "hash": "E8CE6E090F8C4B73919CF980C116F435",
+      "lines": [
+        "Maybe the lap...",
+        "How did you know I'd say that? ->(T20)"
+      ],
+      "character": "Vee",
+      "directedTo": "Gee"
+    },
+    {
+      "currentCode": "T20",
+      "hash": "60A00387D21E4C3CA1711AF369AC78F0",
+      "lines": [
+        "You always do. ->(T21)"
+      ],
+      "character": "Gee",
+      "directedTo": "Vee"
+    },
+    {
+      "currentCode": "T21",
+      "hash": "50D457AA6456438E9301199BE28F2F4F",
+      "lines": [
+        "Always? We just got here. ->(C3)"
+      ],
+      "character": "Vee",
+      "directedTo": "Gee"
+    },
+    {
+      "currentCode": "T22",
+      "hash": "AB664C99064F4755A9BA2A3D1EEC161C",
+      "lines": [
+        "Maybe the laptop is what we're early for. ->(C3)"
+      ],
+      "character": "Vee",
+      "directedTo": "Gee"
+    },
+    {
+      "currentCode": "C3",
+      "hash": "78ADE1D2EB5E4026950B7D337239CE37",
+      "lines": [
+        "if(CF{second-act} && CF{laptop-open}) T23",
+        "D2"
+      ]
+    },
+    {
+      "currentCode": "T23",
+      "hash": "56629520952D42058452008B035F69C1",
+      "lines": [
+        "And it's on. Maybe we're late. ->(D2)"
+      ],
+      "character": "Vee",
+      "directedTo": "Gee"
+    },
+    {
+      "currentCode": "D2",
+      "hash": "BE9AEF8C54674EE8911360E26F99156B",
+      "lines": [
+        "'Let's have a look.' ->(T24)",
+        "{!repeat} 'Why did we come in here?' ->(T25)",
+        "if(CF{second-act}) {!repeat} 'It's going to ask for a password.' ->(T34)"
+      ],
+      "character": "Gee",
+      "directedTo": "Vee"
+    },
+    {
+      "currentCode": "T24",
+      "hash": "CA5F1CF27E464A9EAD96FDB5402226FC",
+      "lines": [
+        "Let's have a look. ->(A4)"
+      ],
+      "character": "Gee",
+      "directedTo": "Vee"
+    },
+    {
+      "currentCode": "T25",
+      "hash": "3AD98857F56941DCB57EF6233283817A",
+      "lines": [
+        "Why did we come in here? ->(AddFact{asked-why}, T26)"
+      ],
+      "character": "Gee",
+      "directedTo": "Vee"
+    },
+    {
+      "currentCode": "T26",
+      "hash": "931C0887886A477783F3AA20CAEA30BB",
+      "lines": [
+        "You came in, so I came in. ->(T27)"
+      ],
+      "character": "Vee",
+      "directedTo": "Gee"
+    },
+    {
+      "currentCode": "T27",
+      "hash": "9C78F990B9BB402496FB7097F8F69008",
+      "lines": [
+        "I came in because you did. ->(T28)"
+      ],
+      "character": "Gee",
+      "directedTo": "Vee"
+    },
+    {
+      "currentCode": "T28",
+      "hash": "72E16D31660F41CB9923ECFBDC28CC60",
+      "lines": [
+        "...Then who came in first? ->(D3)"
+      ],
+      "character": "Vee",
+      "directedTo": "Gee"
+    },
+    {
+      "currentCode": "D3",
+      "hash": "4064B07E693842E18A19C79768D5E0FC",
+      "lines": [
+        "'You did.' ->(T29)",
+        "'Me. By a nose.' ->(T32)",
+        "Say nothing. ->(Timer{L, T31})"
+      ],
+      "character": "Gee",
+      "directedTo": "Vee"
+    },
+    {
+      "currentCode": "T29",
+      "hash": "0321106E92DB470A806564A43151B25E",
+      "lines": [
+        "You did. ->(T30)"
+      ],
+      "character": "Gee",
+      "directedTo": "Vee"
+    },
+    {
+      "currentCode": "T30",
+      "hash": "36CCE3B2C2564CEB8367CDED7E6C697B",
+      "lines": [
+        "I did not. You did. ->(D2)"
+      ],
+      "character": "Vee",
+      "directedTo": "Gee"
+    },
+    {
+      "currentCode": "T31",
+      "hash": "DD7C3D92E6794A12BB69BE9522BB2FE1",
+      "lines": [
+        "...So we came in together. ->(D2)"
+      ],
+      "character": "Vee",
+      "directedTo": "Gee"
+    },
+    {
+      "currentCode": "T32",
+      "hash": "B6E1B7E14BCA4B8CB22AEDD561A7C779",
+      "lines": [
+        "Me. By a nose. ->(Timer{M, T33})"
+      ],
+      "character": "Gee",
+      "directedTo": "Vee"
+    },
+    {
+      "currentCode": "T33",
+      "hash": "D30C8AFA19F24732983D39124CA24D54",
+      "lines": [
+        "Why are you being weird?",
+        "Forget it. I'm looking at the laptop. ->(Timer{2} ->(A4))"
+      ],
+      "character": "Vee",
+      "directedTo": "Gee"
+    },
+    {
+      "currentCode": "T34",
+      "hash": "56A61C53A0BD47B9AB632E29847487C1",
+      "lines": [
+        "It's going to ask for a password. ->(T35)"
+      ],
+      "character": "Gee",
+      "directedTo": "Vee"
+    },
+    {
+      "currentCode": "T35",
+      "hash": "BB9C80BA756F4D798C6626742C823FE8",
+      "lines": [
+        "How would you know? You haven't touched it. ->(D2)"
+      ],
+      "character": "Vee",
+      "directedTo": "Gee"
+    },
+    {
+      "currentCode": "A4",
+      "hash": "B81B7FD0523C4C3E9201E8DB478B3A2C",
+      "lines": [
+        "Move{Vee, Laptop} ->(AddFact{laptop-open}, Trigger{A1, screen-on}, Event{A1, screen-ready} ->(T36))"
+      ]
+    },
+    {
+      "currentCode": "T36",
+      "hash": "5D75DC4A32D347D5AE3CB9BD0EDE5673",
+      "lines": [
+        "It's locked. It wants a password.",
+        "Three letters. {hold} ->(D4)"
+      ],
+      "character": "Vee",
+      "directedTo": "Gee"
+    },
+    {
+      "currentCode": "D4",
+      "hash": "234F19B33FA643F1A4E7C7D3EF54A37A",
+      "lines": [
+        "{!repeat} 'A-B-C?' ->(T37)",
+        "{!repeat} 'G-E-E?' ->(T39)",
+        "{!repeat} 'V-E-E?' ->(T41)",
+        "{!repeat} 'V-L-G?' ->(T43)",
+        "'V-G-S.' ->(T45)",
+        "'I don't know...' ->(T46)"
+      ],
+      "character": "Gee",
+      "directedTo": "Vee"
+    },
+    {
+      "currentCode": "T37",
+      "hash": "63DED9F3CD494C3786CF923166E1A5F8",
+      "lines": [
+        "A-B-C? ->(T38)"
+      ],
+      "character": "Gee",
+      "directedTo": "Vee"
+    },
+    {
+      "currentCode": "T38",
+      "hash": "51C4DAB0D3564316BD14ABD34EC44DF8",
+      "lines": [
+        "No. Who would pick that? ->(D4)"
+      ],
+      "character": "Vee",
+      "directedTo": "Gee"
+    },
+    {
+      "currentCode": "T39",
+      "hash": "BF8E9B736B1B454EB65969367728CCB6",
+      "lines": [
+        "G-E-E? ->(T40)"
+      ],
+      "character": "Gee",
+      "directedTo": "Vee"
+    },
+    {
+      "currentCode": "T40",
+      "hash": "170D3CF40DF54B1EAC68095AD6EE880C",
+      "lines": [
+        "No. Not everything is about you, Gee. ->(D4)"
+      ],
+      "character": "Vee",
+      "directedTo": "Gee"
+    },
+    {
+      "currentCode": "T41",
+      "hash": "A05AC90188454C3AAE9B41DA1F9D194E",
+      "lines": [
+        "V-E-E? ->(T42)"
+      ],
+      "character": "Gee",
+      "directedTo": "Vee"
+    },
+    {
+      "currentCode": "T42",
+      "hash": "F372EABC67E34A66A6E7DBE655CE22FC",
+      "lines": [
+        "No. But it's nice you thought of me. ->(D4)"
+      ],
+      "character": "Vee",
+      "directedTo": "Gee"
+    },
+    {
+      "currentCode": "T43",
+      "hash": "B8F619007C4F4453948FAF28D8C39ED6",
+      "lines": [
+        "V-L-G?",
+        "Vee, Laptop, Gee. ->(T44)"
+      ],
+      "character": "Gee",
+      "directedTo": "Vee"
+    },
+    {
+      "currentCode": "T44",
+      "hash": "AB8CADAD40804F8CBA51E555277D2052",
+      "lines": [
+        "Of course not.",
+        "What are the odds the password is exactly what's in this room? ->(D4)"
+      ],
+      "character": "Vee",
+      "directedTo": "Gee"
+    },
+    {
+      "currentCode": "T45",
+      "hash": "615D4EFBC6F9499EBEC15B0E0570A799",
+      "lines": [
+        "V-G-S. ->(AddFact{guessed-it}, T47)"
+      ],
+      "character": "Gee",
+      "directedTo": "Vee"
+    },
+    {
+      "currentCode": "T46",
+      "hash": "BC4965D98F0A46D790FD6C5156646362",
+      "lines": [
+        "I don't know... ->(T48)"
+      ],
+      "character": "Gee",
+      "directedTo": "Vee"
+    },
+    {
+      "currentCode": "T47",
+      "hash": "5B64BA9478DE41ADA058E6CFE6DB7348",
+      "lines": [
+        "V... G... S.",
+        "V and G are us. Who's S?",
+        "Wait, it... ->(A5)"
+      ],
+      "character": "Vee",
+      "directedTo": "Gee"
+    },
+    {
+      "currentCode": "T48",
+      "hash": "071EEE83C5864270986C90C14BCE0198",
+      "lines": [
+        "Neither do I.",
+        "I'll just press something. ->(A5)"
+      ],
+      "character": "Vee",
+      "directedTo": "Gee"
+    },
+    {
+      "currentCode": "A5",
+      "hash": "861FA1B562FB45C28AD4151268FE4E1E",
+      "lines": [
+        "Node{waitParallel} &(T49, T50) ->(T51)"
+      ]
+    },
+    {
+      "currentCode": "T49",
+      "hash": "F7757C63DB66402883490E5720EFCFCB",
+      "lines": [
+        "It opened!",
+        "{parallel}"
+      ],
+      "character": "Vee",
+      "directedTo": "Gee"
+    },
+    {
+      "currentCode": "T50",
+      "hash": "7DD35FF1F59A4028A4A626F0E1BADA75",
+      "lines": [
+        "No way.",
+        "{parallel}"
+      ],
+      "character": "Gee",
+      "directedTo": "Vee"
+    },
+    {
+      "currentCode": "T51",
+      "hash": "A46CBD6FA39A48CF8DA74E32479D4030",
+      "lines": [
+        "There's a word at the top.",
+        "\"VgScript.\" ->(C4)"
+      ],
+      "character": "Vee",
+      "directedTo": "Gee"
+    },
+    {
+      "currentCode": "C4",
+      "hash": "5935EF49C48345FF833D594CF1462AEB",
+      "lines": [
+        "if(CF{guessed-it}) T52",
+        "T53"
+      ]
+    },
+    {
+      "currentCode": "T52",
+      "hash": "312A5AD31339482A8EC54059DE4A6169",
+      "lines": [
+        "That's what V-G-S stands for... You guessed it.",
+        "How did you know? ->(RemoveFact{guessed-it}, C5)"
+      ],
+      "character": "Vee",
+      "directedTo": "Gee"
+    },
+    {
+      "currentCode": "T53",
+      "hash": "62014E08562B4FE3B32EFB16EB359FB0",
+      "lines": [
+        "V, G, S. That's what I pressed.",
+        "I wasn't even looking. ->(C6)"
+      ],
+      "character": "Vee",
+      "directedTo": "Gee"
+    },
+    {
+      "currentCode": "C5",
+      "hash": "93FF52B26426449E95816489AA94A58D",
+      "lines": [
+        "if(CF{second-act}) T54",
+        "T55"
+      ]
+    },
+    {
+      "currentCode": "T54",
+      "hash": "C7FD0C908095418FA224443704402C60",
+      "lines": [
+        "You read it out. Last time. ->(T85)"
+      ],
+      "character": "Gee",
+      "directedTo": "Vee"
+    },
+    {
+      "currentCode": "T55",
+      "hash": "9094E5E07F274FB895A76276A5DE09E9",
+      "lines": [
+        "I didn't. It just came out. ->(T56)"
+      ],
+      "character": "Gee",
+      "directedTo": "Vee"
+    },
+    {
+      "currentCode": "T56",
+      "hash": "2CDCE15EF7864A468DF5538E1E4E8EB1",
+      "lines": [
+        "Well, it came out right. ->(C6)"
+      ],
+      "character": "Vee",
+      "directedTo": "Gee"
+    },
+    {
+      "currentCode": "C6",
+      "hash": "D7D94F49E99C4C1994A82C07FD19EBFB",
+      "lines": [
+        "if(CF{second-act}) T84",
+        "T57"
+      ]
+    },
+    {
+      "currentCode": "T57",
+      "hash": "52E481A1FAEE441688C34826B2D27771",
+      "lines": [
+        "Under \"VgScript\" there's a file. \"S1_Room.vgs\".",
+        "...It's us. Everything we've said, written down.",
+        "\"Hi, Gee.\" \"Hi, Vee.\"",
+        "\"Are we early?\" \"For what?\"",
+        "\"I don't know. It's only us.\" \"And a laptop.\"",
+        "A bit further down there's a line of yours. Except there are three:",
+        "\"We could come back later.\" \"I think we've been here before.\" \"What about the laptop?\" ->(C7)"
+      ],
+      "character": "Vee",
+      "directedTo": "Gee"
+    },
+    {
+      "currentCode": "C7",
+      "hash": "C0E8487FA7614A8FBA44E5A8503D7F65",
+      "lines": [
+        "if(T10) T58",
+        "if(T12) T59",
+        "T60"
+      ]
+    },
+    {
+      "currentCode": "T58",
+      "hash": "7161E514368B4B32942F16482BB95569",
+      "lines": [
+        "I said the first one. ->(T61)"
+      ],
+      "character": "Gee",
+      "directedTo": "Vee"
+    },
+    {
+      "currentCode": "T59",
+      "hash": "3327AA67119047869FC737D22FF4B264",
+      "lines": [
+        "I said the second one. ->(T61)"
+      ],
+      "character": "Gee",
+      "directedTo": "Vee"
+    },
+    {
+      "currentCode": "T60",
+      "hash": "2396B481C5234F5EB7279AF011BF808B",
+      "lines": [
+        "I said the last one. ->(T61)"
+      ],
+      "character": "Gee",
+      "directedTo": "Vee"
+    },
+    {
+      "currentCode": "T61",
+      "hash": "F8B4777FF3B44C07B70B7273BB729A6C",
+      "lines": [
+        "So why are the other two there? ->(T62)"
+      ],
+      "character": "Vee",
+      "directedTo": "Gee"
+    },
+    {
+      "currentCode": "T62",
+      "hash": "E47EADCDD8F14DE4939ACD3AE992A5E4",
+      "lines": [
+        "In case I said them? ->(T63)"
+      ],
+      "character": "Gee",
+      "directedTo": "Vee"
+    },
+    {
+      "currentCode": "T63",
+      "hash": "321F311D72CE4FA0921C8E296FC19C68",
+      "lines": [
+        "Mine only have one each.",
+        "So you get to pick, and I don't? ->(C8)"
+      ],
+      "character": "Vee",
+      "directedTo": "Gee"
+    },
+    {
+      "currentCode": "C8",
+      "hash": "BA5F38B7CA0B48C6A80DAEB3007315AB",
+      "lines": [
+        "if(CF{second-act}) T65",
+        "T64"
+      ]
+    },
+    {
+      "currentCode": "T64",
+      "hash": "393A874637B74E859DA8BEAFA6694155",
+      "lines": [
+        "I didn't pick anything. I just said it. ->(D5)"
+      ],
+      "character": "Gee",
+      "directedTo": "Vee"
+    },
+    {
+      "currentCode": "T65",
+      "hash": "7CD05F3BF40E4CF8866C05B72A769B47",
+      "lines": [
+        "I don't pick either. Someone else does. ->(D5)"
+      ],
+      "character": "Gee",
+      "directedTo": "Vee"
+    },
+    {
+      "currentCode": "D5",
+      "hash": "3D349B66222749399AFD3A980680DD5C",
+      "lines": [
+        "if(CF{asked-why} || T32) 'Then you're the one picking.' ->(T66)",
+        "if!(CF{asked-why}) 'Read the rest.' ->(T67)",
+        "Close the laptop. ->(Move{Gee, Laptop} ->(RemoveFact{laptop-open}, Trigger{A1, screen-off}, T78))"
+      ],
+      "character": "Gee",
+      "directedTo": "Vee"
+    },
+    {
+      "currentCode": "T66",
+      "hash": "8011010781314A488D1C6210A019EB91",
+      "lines": [
+        "Then you're the one picking. ->(T68)"
+      ],
+      "character": "Gee",
+      "directedTo": "Vee"
+    },
+    {
+      "currentCode": "T67",
+      "hash": "766C1A2CBF0740BCB54B94E267983097",
+      "lines": [
+        "Read the rest. ->(T69)"
+      ],
+      "character": "Gee",
+      "directedTo": "Vee"
+    },
+    {
+      "currentCode": "T68",
+      "hash": "040DAB1EAF44449E92E0D1A4C69EEADC",
+      "lines": [
+        "Me? I don't even get to pick mine. ->(T69)"
+      ],
+      "character": "Vee",
+      "directedTo": "Gee"
+    },
+    {
+      "currentCode": "T69",
+      "hash": "43D36B4C81604F5998E0D8FC4385699E",
+      "lines": [
+        "There are notes between our lines.",
+        "\"The player chooses what Gee says.\" ->(C9)"
+      ],
+      "character": "Vee",
+      "directedTo": "Gee"
+    },
+    {
+      "currentCode": "C9",
+      "hash": "B9B6B4CA8175429091DABAF9E91E5F85",
+      "lines": [
+        "if(CF{second-act}) T70",
+        "if(T32) T71",
+        "T76"
+      ]
+    },
+    {
+      "currentCode": "T70",
+      "hash": "F2944D6436324F01900C74F1B6A85E3C",
+      "lines": [
+        "Told you. ->(T77)"
+      ],
+      "character": "Gee",
+      "directedTo": "Vee"
+    },
+    {
+      "currentCode": "T71",
+      "hash": "018F8C1B9B844E36988D3A7771E9E63C",
+      "lines": [
+        "So that's why I said \"by a nose\". ->(T72)"
+      ],
+      "character": "Gee",
+      "directedTo": "Vee"
+    },
+    {
+      "currentCode": "T72",
+      "hash": "D08BEBAE757C40AFBB5D5EC96A92FC53",
+      "lines": [
+        "Somebody picked that? On purpose? ->(T73)"
+      ],
+      "character": "Vee",
+      "directedTo": "Gee"
+    },
+    {
+      "currentCode": "T73",
+      "hash": "2D77F4EEEAFE44C89CDF386E37C233EE",
+      "lines": [
+        "It's funny. We don't even have noses. ->(T74)"
+      ],
+      "character": "Gee",
+      "directedTo": "Vee"
+    },
+    {
+      "currentCode": "T74",
+      "hash": "139B5DF45B9543EE93FD78CF7FC1ADA4",
+      "lines": [
+        "Ha! {waitParallel} &(T75) ->(T77)",
+        "{parallel}"
+      ],
+      "character": "Vee",
+      "directedTo": "Gee"
+    },
+    {
+      "currentCode": "T75",
+      "hash": "A5AEDA855871438D95B2EC1D61E9D699",
+      "lines": [
+        "Ha ha!",
+        "{parallel}"
+      ],
+      "character": "Gee",
+      "directedTo": "Vee"
+    },
+    {
+      "currentCode": "T76",
+      "hash": "7F26357EA5FA49859E5851FA80DA79AB",
+      "lines": [
+        "The player? ->(T77)"
+      ],
+      "character": "Gee",
+      "directedTo": "Vee"
+    },
+    {
+      "currentCode": "T77",
+      "hash": "9D45ADCA1B7C4CA2B88F9510189781D7",
+      "lines": [
+        "And right at the top: \"VgScript Example scenes.\"",
+        "We're an example, Gee. ->(T79)"
+      ],
+      "character": "Vee",
+      "directedTo": "Gee"
+    },
+    {
+      "currentCode": "T78",
+      "hash": "8CF04BD71863443C98FB5A630CE83613",
+      "lines": [
+        "Too late. I saw the notes: \"The player chooses what Gee says.\"",
+        "And the top: \"VgScript Example scenes.\" We're an example, Gee. ->(T79)"
+      ],
+      "character": "Vee",
+      "directedTo": "Gee"
+    },
+    {
+      "currentCode": "T79",
+      "hash": "CCCA033C8B394B60B7AC523A99A4F6EA",
+      "lines": [
+        "An example of what? ->(T80)"
+      ],
+      "character": "Gee",
+      "directedTo": "Vee"
+    },
+    {
+      "currentCode": "T80",
+      "hash": "F4CA8F6B7A6B4E0B8D54CE7F456314CE",
+      "lines": [
+        "Of two people talking, I guess. ->(T81)"
+      ],
+      "character": "Vee",
+      "directedTo": "Gee"
+    },
+    {
+      "currentCode": "T81",
+      "hash": "34DD48CFF5D7448F857022A7EDD610D0",
+      "lines": [
+        "Then next time, let's be funnier. ->(T82)"
+      ],
+      "character": "Gee",
+      "directedTo": "Vee"
+    },
+    {
+      "currentCode": "T82",
+      "hash": "2405AB05673E436C86078028AC8B6D1B",
+      "lines": [
+        "Don't tell me. The player's the one picking. ->(A6)"
+      ],
+      "character": "Vee",
+      "directedTo": "Gee"
+    },
+    {
+      "currentCode": "A6",
+      "hash": "922C3CD410184C29BE31AD5C3B8345C5",
+      "lines": [
+        "Node{waitParallel} &(T83, Timer{L}) ->(A7)"
+      ]
+    },
+    {
+      "currentCode": "T83",
+      "hash": "042C66A29F2B4F0F85012C489C43E2B9",
+      "lines": [
+        "And they can start us over whenever they like."
+      ],
+      "character": "Vee",
+      "directedTo": "Gee"
+    },
+    {
+      "currentCode": "T84",
+      "hash": "4E92B096F56E47F48B68A5DC506A5602",
+      "lines": [
+        "Same as last time. ->(T85)"
+      ],
+      "character": "Gee",
+      "directedTo": "Vee"
+    },
+    {
+      "currentCode": "T85",
+      "hash": "C7A7D412BB104764B5269BD09E35647F",
+      "lines": [
+        "Last time? ->(D6)"
+      ],
+      "character": "Vee",
+      "directedTo": "Gee"
+    },
+    {
+      "currentCode": "D6",
+      "hash": "4E4DB0A1EFBA4E0295556BA82404F902",
+      "lines": [
+        "'Read it. You'll see.' ->(T86)",
+        "{hold} Close the laptop. ->(Move{Gee, Laptop} ->(RemoveFact{laptop-open}, Trigger{A1, screen-off}, T88))"
+      ],
+      "character": "Gee",
+      "directedTo": "Vee"
+    },
+    {
+      "currentCode": "T86",
+      "hash": "262D59D6C0C346BEB28F8BB25564FA96",
+      "lines": [
+        "Read it. You'll see. ->(T87)"
+      ],
+      "character": "Gee",
+      "directedTo": "Vee"
+    },
+    {
+      "currentCode": "T87",
+      "hash": "C9AA2F3EBBBE430388AE8366FA73AFF9",
+      "lines": [
+        "\"Hi, Gee.\" \"Hi, Vee.\"... It's us. Everything we've said, in a file.",
+        "And under your name there's a list of things you could say. ->(T63)"
+      ],
+      "character": "Vee",
+      "directedTo": "Gee"
+    },
+    {
+      "currentCode": "T88",
+      "hash": "BA55F230C5554071942A3FFE11CBE896",
+      "lines": [
+        "Hey, I was reading that. ->(T89)"
+      ],
+      "character": "Vee",
+      "directedTo": "Gee"
+    },
+    {
+      "currentCode": "T89",
+      "hash": "62CCDA16B60446D9B8B3B91D802D246D",
+      "lines": [
+        "I know how it ends. We start over. ->(A7)"
+      ],
+      "character": "Gee",
+      "directedTo": "Vee"
+    },
+    {
+      "currentCode": "A7",
+      "hash": "701BE21829BD43C8AE01995A0F356DB3",
+      "lines": [
+        "Cancel{A1} ->(F4C4FE7183044E7DA63DD7EA4653B788 )"
+      ]
+    }
+  ]
+}

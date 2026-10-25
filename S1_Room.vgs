@@ -1,0 +1,489 @@
+// VgScript Example scenes
+
+[S1] The Room
+
+// A1 is the scene handler: a Blueprint action in the showcase level. It stays alive during the scene,
+// sets the room up and opens and closes the laptop when triggered. &(...) means it starts C1 alongside it.
+[A1] RoomHandler &(C1)
+
+// A condition group runs the first entry whose condition holds; each entry names its target directly.
+// The last entry has no condition: it is the "else". CF{...} checks a fact.
+// Facts outlive the scene: scene 2 stores "second-act" before it starts this scene again.
+[C1]
+[1] if(CF{second-act} && CF{laptop-open}) A2
+[2] A3
+
+// Trigger sends a value to a running action, in this case the scene handler switches the laptop screen on.
+[A2] Trigger{A1, screen-on} ->(A3)
+
+// Move is the showcase's own action, a Blueprint registered in DA_ShowcaseRegistry:
+// Move{who, where} walks a character to a spot in the level and finishes when it arrives.
+// &(...) starts Gee's walk at the same time, and ->(T1) would be waiting for Vee alone, here.
+[A3] Move{Vee, Left} &(Move{Gee, Right}) ->(T1)
+
+// [P] names who speaks the talks and decisions below it; "->" names who they speak to.
+[P] Vee -> Gee
+[T1]
+[1] Hi, Gee. ->(T2)
+
+[P] Gee -> Vee
+[T2]
+[1] Hi, Vee. ->(T3)
+
+[P] Vee -> Gee
+[T3]
+[1] Are we early? ->(T4)
+
+[P] Gee -> Vee
+[T4]
+[1] For what? ->(T5)
+
+[P] Vee -> Gee
+[T5]
+[1] I don't know. It's only us. ->(T6)
+
+[P] Gee -> Vee
+[T6]
+[1] And a laptop. ->(T7)
+
+[P] Vee -> Gee
+[T7]
+[1] Yes, and that.
+[2] So... should we wait? ->(T8)
+
+[P] Gee -> Vee
+[T8]
+[1] For what? ->(T9)
+
+[P] Vee -> Gee
+[T9]
+[1] For whatever we're early for. ->(D1)
+
+// The player chooses what Gee says. A quoted option reuses the first line of the talk it leads to,
+// so the choice and the spoken line share one translation. An option's if(...) hides it until the condition is met.
+// {hold} asks the player to hold the option to confirm it.
+
+[P] Gee -> Vee
+[D1]
+[1] 'We could come back later.' ->(T10)
+[2] 'I think we've been here before.' ->(T12)
+[3] 'What about the laptop?' ->(T16)
+[4] if(CF{second-act}) 'You're going to say the laptop is what we're early for.' ->(T18)
+
+[T10]
+[1] We could come back later. ->(T11)
+
+[P] Vee -> Gee
+[T11]
+[1] And miss it? ->(T22)
+
+[P] Gee -> Vee
+[T12]
+[1] I think we've been here before. ->(C2)
+
+[C2]
+[1] if(CF{second-act}) T15
+[2] T13
+
+[P] Vee -> Gee
+[T13]
+[1] Why would you say that? ->(T14)
+
+// A speaker without "->" talks to nobody in particular.
+[P] Gee
+[T14]
+[1] I don't know why I said that. ->(T22)
+
+[P] Vee -> Gee
+[T15]
+[1] Were we? ->(T22)
+
+[P] Gee -> Vee
+[T16]
+[1] What about the laptop? ->(T17)
+
+[P] Vee -> Gee
+[T17]
+[1] Maybe that's what we're early for. ->(C3)
+
+[P] Gee -> Vee
+[T18]
+[1] You're going to say the laptop is what we're early for. ->(T19)
+
+[P] Vee -> Gee
+[T19]
+[1] Maybe the lap...
+[2] How did you know I'd say that? ->(T20)
+
+[P] Gee -> Vee
+[T20]
+[1] You always do. ->(T21)
+
+[P] Vee -> Gee
+[T21]
+[1] Always? We just got here. ->(C3)
+
+[P] Vee -> Gee
+[T22]
+[1] Maybe the laptop is what we're early for. ->(C3)
+
+[C3]
+[1] if(CF{second-act} && CF{laptop-open}) T23
+[2] D2
+
+[T23]
+[1] And it's on. Maybe we're late. ->(D2)
+
+// {!repeat} hides an option once picked, in this pass or an earlier one.
+[P] Gee -> Vee
+[D2]
+[1] 'Let's have a look.' ->(T24)
+[2] {!repeat} 'Why did we come in here?' ->(T25)
+[3] if(CF{second-act}) {!repeat} 'It's going to ask for a password.' ->(T34)
+
+[T24]
+[1] Let's have a look. ->(A4)
+
+// A comma starts both targets in order, without waiting: the fact is stored and Vee answers.
+[T25]
+[1] Why did we come in here? ->(AddFact{asked-why}, T26)
+
+[P] Vee -> Gee
+[T26]
+[1] You came in, so I came in. ->(T27)
+
+[P] Gee -> Vee
+[T27]
+[1] I came in because you did. ->(T28)
+
+[P] Vee -> Gee
+[T28]
+[1] ...Then who came in first? ->(D3)
+
+// We can execute an action written inline, with no [A] entry of its own.
+// Timer{L, T31} keeps six seconds of silence, then starts T31, it's an abbreviation of Timer{L} ->(T31).
+// Using "L" is just to be able to change all variables using it at once in editor, without "magic numbers" in the script.
+[P] Gee -> Vee
+[D3]
+[1] 'You did.' ->(T29)
+[2] 'Me. By a nose.' ->(T32)
+[3] Say nothing. ->(Timer{L, T31})
+
+[T29]
+[1] You did. ->(T30)
+
+[P] Vee -> Gee
+[T30]
+[1] I did not. You did. ->(D2)
+
+[T31]
+[1] ...So we came in together. ->(D2)
+
+[P] Gee -> Vee
+[T32]
+[1] Me. By a nose. ->(Timer{M, T33})
+
+// Example of a nested flow: wait two seconds, then Vee walks to the laptop. It's "->" inside  "->".
+[P] Vee -> Gee
+[T33]
+[1] Why are you being weird?
+[2] Forget it. I'm looking at the laptop. ->(Timer{2} ->(A4))
+
+[P] Gee -> Vee
+[T34]
+[1] It's going to ask for a password. ->(T35)
+
+[P] Vee -> Gee
+[T35]
+[1] How would you know? You haven't touched it. ->(D2)
+
+// Vee walks to the laptop first. Then, in order and without waiting: the fact is stored, Trigger asks the
+// scene handler to open the laptop, and Event waits until the handler raises "screen-ready" before T36 starts.
+[A4] Move{Vee, Laptop} ->(AddFact{laptop-open}, Trigger{A1, screen-on}, Event{A1, screen-ready} ->(T36))
+
+// {hold} at the end of a talk line keeps it on screen after it ends, until the next line shows:
+// "Three letters." stays up while the player picks a guess.
+[P] Vee -> Gee
+[T36]
+[1] It's locked. It wants a password.
+[2] Three letters. {hold} ->(D4)
+
+// A decision can lead back to itself: every wrong guess returns here,
+// and {!repeat} drops it once tried, until only the password and "I don't know..." are left.
+// The right guess also stores a fact, so the laptop scene can react to it.
+[P] Gee -> Vee
+[D4]
+[1] {!repeat} 'A-B-C?' ->(T37)
+[2] {!repeat} 'G-E-E?' ->(T39)
+[3] {!repeat} 'V-E-E?' ->(T41)
+[4] {!repeat} 'V-L-G?' ->(T43)
+[5] 'V-G-S.' ->(T45)
+[6] 'I don't know...' ->(T46)
+
+[T37]
+[1] A-B-C? ->(T38)
+
+[P] Vee -> Gee
+[T38]
+[1] No. Who would pick that? ->(D4)
+
+[P] Gee -> Vee
+[T39]
+[1] G-E-E? ->(T40)
+
+[P] Vee -> Gee
+[T40]
+[1] No. Not everything is about you, Gee. ->(D4)
+
+[P] Gee -> Vee
+[T41]
+[1] V-E-E? ->(T42)
+
+[P] Vee -> Gee
+[T42]
+[1] No. But it's nice you thought of me. ->(D4)
+
+[P] Gee -> Vee
+[T43]
+[1] V-L-G?
+[2] Vee, Laptop, Gee. ->(T44)
+
+[P] Vee -> Gee
+[T44]
+[1] Of course not.
+[2] What are the odds the password is exactly what's in this room? ->(D4)
+
+[P] Gee -> Vee
+[T45]
+[1] V-G-S. ->(AddFact{guessed-it}, T47)
+
+[T46]
+[1] I don't know... ->(T48)
+
+[P] Vee -> Gee
+[T47]
+[1] V... G... S.
+[2] V and G are us. Who's S?
+[3] Wait, it... ->(A5)
+
+[T48]
+[1] Neither do I.
+[2] I'll just press something. ->(A5)
+
+// Two talks at once: Node starts both, and {waitParallel} waits for both to end. A talk only plays over another
+// speaker's talk when it carries {parallel}, written on its own line under the talk; without it, it waits its turn.
+[A5] Node{waitParallel} &(T49, T50) ->(T51)
+
+[P] Vee -> Gee
+[T49]
+[1] It opened!
+{parallel}
+
+[P] Gee -> Vee
+[T50]
+[1] No way.
+{parallel}
+
+[P] Vee -> Gee
+[T51]
+[1] There's a word at the top.
+[2] "VgScript." ->(C4)
+
+[C4]
+[1] if(CF{guessed-it}) T52
+[2] T53
+
+// RemoveFact clears the guess, so the next act asks again.
+[T52]
+[1] That's what V-G-S stands for... You guessed it.
+[2] How did you know? ->(RemoveFact{guessed-it}, C5)
+
+[T53]
+[1] V, G, S. That's what I pressed.
+[2] I wasn't even looking. ->(C6)
+
+[C5]
+[1] if(CF{second-act}) T54
+[2] T55
+
+[P] Gee -> Vee
+[T54]
+[1] You read it out. Last time. ->(T85)
+
+[T55]
+[1] I didn't. It just came out. ->(T56)
+
+[P] Vee -> Gee
+[T56]
+[1] Well, it came out right. ->(C6)
+
+[C6]
+[1] if(CF{second-act}) T84
+[2] T57
+
+[T57]
+[1] Under "VgScript" there's a file. "S1_Room.vgs".
+[2] ...It's us. Everything we've said, written down.
+[3] "Hi, Gee." "Hi, Vee."
+[4] "Are we early?" "For what?"
+[5] "I don't know. It's only us." "And a laptop."
+[6] A bit further down there's a line of yours. Except there are three:
+[7] "We could come back later." "I think we've been here before." "What about the laptop?" ->(C7)
+
+// if(T10) checks a talk, so the group follows what the player had Gee say.
+[P] Gee -> Vee
+[C7]
+[1] if(T10) T58
+[2] if(T12) T59
+[3] T60
+
+[T58]
+[1] I said the first one. ->(T61)
+
+[T59]
+[1] I said the second one. ->(T61)
+
+[T60]
+[1] I said the last one. ->(T61)
+
+[P] Vee -> Gee
+[T61]
+[1] So why are the other two there? ->(T62)
+
+[P] Gee -> Vee
+[T62]
+[1] In case I said them? ->(T63)
+
+[P] Vee -> Gee
+[T63]
+[1] Mine only have one each.
+[2] So you get to pick, and I don't? ->(C8)
+
+[C8]
+[1] if(CF{second-act}) T65
+[2] T64
+
+[P] Gee -> Vee
+[T64]
+[1] I didn't pick anything. I just said it. ->(D5)
+
+[T65]
+[1] I don't pick either. Someone else does. ->(D5)
+
+// || means "or", && means "and". if!(...) negates the whole condition.
+// T32 checks that a talk has played, in this pass or an earlier one.
+[D5]
+[1] if(CF{asked-why} || T32) 'Then you're the one picking.' ->(T66)
+[2] if!(CF{asked-why}) 'Read the rest.' ->(T67)
+[3] Close the laptop. ->(Move{Gee, Laptop} ->(RemoveFact{laptop-open}, Trigger{A1, screen-off}, T78))
+
+[T66]
+[1] Then you're the one picking. ->(T68)
+
+[T67]
+[1] Read the rest. ->(T69)
+
+[P] Vee -> Gee
+[T68]
+[1] Me? I don't even get to pick mine. ->(T69)
+
+[T69]
+[1] There are notes between our lines.
+[2] "The player chooses what Gee says." ->(C9)
+
+[C9]
+[1] if(CF{second-act}) T70
+[2] if(T32) T71
+[3] T76
+
+[P] Gee -> Vee
+[T70]
+[1] Told you. ->(T77)
+
+[T71]
+[1] So that's why I said "by a nose". ->(T72)
+
+[P] Vee -> Gee
+[T72]
+[1] Somebody picked that? On purpose? ->(T73)
+
+[P] Gee -> Vee
+[T73]
+[1] It's funny. We don't even have noses. ->(T74)
+
+// Two talks at once without a Node: Vee's line starts Gee's talk with &(...), and {waitParallel} holds the line's
+// ->(...) until that talk ends. Write it on the line itself; on its own line under the talk, like {parallel}, it does nothing.
+[P] Vee -> Gee
+[T74]
+[1] Ha! {waitParallel} &(T75) ->(T77)
+{parallel}
+
+[P] Gee -> Vee
+[T75]
+[1] Ha ha!
+{parallel}
+
+[T76]
+[1] The player? ->(T77)
+
+[P] Vee -> Gee
+[T77]
+[1] And right at the top: "VgScript Example scenes."
+[2] We're an example, Gee. ->(T79)
+
+[T78]
+[1] Too late. I saw the notes: "The player chooses what Gee says."
+[2] And the top: "VgScript Example scenes." We're an example, Gee. ->(T79)
+
+[P] Gee -> Vee
+[T79]
+[1] An example of what? ->(T80)
+
+[P] Vee -> Gee
+[T80]
+[1] Of two people talking, I guess. ->(T81)
+
+[P] Gee -> Vee
+[T81]
+[1] Then next time, let's be funnier. ->(T82)
+
+[P] Vee -> Gee
+[T82]
+[1] Don't tell me. The player's the one picking. ->(A6)
+
+[A6] Node{waitParallel} &(T83, Timer{L}) ->(A7)
+
+[P] Vee -> Gee
+[T83] And they can start us over whenever they like.
+
+[P] Gee -> Vee
+[T84]
+[1] Same as last time. ->(T85)
+
+[P] Vee -> Gee
+[T85]
+[1] Last time? ->(D6)
+
+[P] Gee -> Vee
+[D6]
+[1] 'Read it. You'll see.' ->(T86)
+[2] {hold} Close the laptop. ->(Move{Gee, Laptop} ->(RemoveFact{laptop-open}, Trigger{A1, screen-off}, T88))
+
+[T86]
+[1] Read it. You'll see. ->(T87)
+
+[P] Vee -> Gee
+[T87]
+[1] "Hi, Gee." "Hi, Vee."... It's us. Everything we've said, in a file.
+[2] And under your name there's a list of things you could say. ->(T63)
+
+[T88]
+[1] Hey, I was reading that. ->(T89)
+
+[P] Gee -> Vee
+[T89]
+[1] I know how it ends. We start over. ->(A7)
+
+// Stop the scene handler and jump to the next scene. Write it as ->(S2-A1);
+// "vgs resolve-links" swaps it for the destination's stable hash, so renumbering scene 2 never breaks the jump.
+[A7] Cancel{A1} ->(F4C4FE7183044E7DA63DD7EA4653B788 /*The End S2-A1*/)
