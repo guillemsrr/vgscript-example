@@ -1,7 +1,7 @@
 {
-  "schemaVersion": 1,
+  "schemaVersion": 2,
   "scriptId": "3474650c-11e9-4c96-89a8-0b11c2d28799",
-  "scriptPath": "./S2_End.vgs",
+  "scriptPath": "./Plugins/vgscript/Scripts/vgscript-example/S2_End.vgs",
   "sceneKey": "S2",
   "sceneName": "The End",
   "entries": [
@@ -19,7 +19,9 @@
         "Is that it? ->(C1)"
       ],
       "character": "Vee",
-      "directedTo": "Gee"
+      "directedTo": [
+        "Gee"
+      ]
     },
     {
       "currentCode": "C1",
@@ -37,7 +39,9 @@
         "From here it goes back to the top. ->(T3)"
       ],
       "character": "Gee",
-      "directedTo": "Vee"
+      "directedTo": [
+        "Vee"
+      ]
     },
     {
       "currentCode": "T3",
@@ -46,7 +50,9 @@
         "Then we leave before it does. ->(A2)"
       ],
       "character": "Vee",
-      "directedTo": "Gee"
+      "directedTo": [
+        "Gee"
+      ]
     },
     {
       "currentCode": "A2",
@@ -69,8 +75,7 @@
         "'Let's go.' ->(T4)",
         "{hold} 'Let's wait.' ->(T5)"
       ],
-      "character": "Gee",
-      "directedTo": "Vee"
+      "character": "Gee"
     },
     {
       "currentCode": "T4",
@@ -79,7 +84,9 @@
         "Let's go. ->(A4)"
       ],
       "character": "Gee",
-      "directedTo": "Vee"
+      "directedTo": [
+        "Vee"
+      ]
     },
     {
       "currentCode": "A4",
@@ -95,7 +102,9 @@
         "Let's wait. ->(T6)"
       ],
       "character": "Gee",
-      "directedTo": "Vee"
+      "directedTo": [
+        "Vee"
+      ]
     },
     {
       "currentCode": "T6",
@@ -104,7 +113,9 @@
         "For what? ->(T7)"
       ],
       "character": "Vee",
-      "directedTo": "Gee"
+      "directedTo": [
+        "Gee"
+      ]
     },
     {
       "currentCode": "T7",
@@ -113,7 +124,9 @@
         "For someone to pick. ->(A5)"
       ],
       "character": "Gee",
-      "directedTo": "Vee"
+      "directedTo": [
+        "Vee"
+      ]
     },
     {
       "currentCode": "A5",
@@ -129,7 +142,9 @@
         "So. ->(Timer{S} ->(T9))"
       ],
       "character": "Gee",
-      "directedTo": "Vee"
+      "directedTo": [
+        "Vee"
+      ]
     },
     {
       "currentCode": "T9",
@@ -138,7 +153,9 @@
         "So. ->(Timer{L} ->(T10))"
       ],
       "character": "Vee",
-      "directedTo": "Gee"
+      "directedTo": [
+        "Gee"
+      ]
     },
     {
       "currentCode": "T10",
@@ -147,7 +164,9 @@
         "Do you think they're still there? ->(Timer{S} ->(T11))"
       ],
       "character": "Gee",
-      "directedTo": "Vee"
+      "directedTo": [
+        "Vee"
+      ]
     },
     {
       "currentCode": "T11",
@@ -156,7 +175,9 @@
         "We're still talking, aren't we? ->(Timer{L} ->(T12))"
       ],
       "character": "Vee",
-      "directedTo": "Gee"
+      "directedTo": [
+        "Gee"
+      ]
     },
     {
       "currentCode": "T12",
@@ -165,7 +186,9 @@
         "Say something new. ->(Timer{S} ->(T13))"
       ],
       "character": "Vee",
-      "directedTo": "Gee"
+      "directedTo": [
+        "Gee"
+      ]
     },
     {
       "currentCode": "T13",
@@ -174,7 +197,9 @@
         "Something new. ->(Timer{S} ->(T14))"
       ],
       "character": "Gee",
-      "directedTo": "Vee"
+      "directedTo": [
+        "Vee"
+      ]
     },
     {
       "currentCode": "T14",
@@ -183,7 +208,9 @@
         "Not like that. ->(Timer{L} ->(T15))"
       ],
       "character": "Vee",
-      "directedTo": "Gee"
+      "directedTo": [
+        "Gee"
+      ]
     },
     {
       "currentCode": "T15",
@@ -192,7 +219,9 @@
         "We could go. ->(Timer{M} ->(T16))"
       ],
       "character": "Gee",
-      "directedTo": "Vee"
+      "directedTo": [
+        "Vee"
+      ]
     },
     {
       "currentCode": "T16",
@@ -201,7 +230,9 @@
         "We could. ->(Timer{L} ->(T17))"
       ],
       "character": "Vee",
-      "directedTo": "Gee"
+      "directedTo": [
+        "Gee"
+      ]
     },
     {
       "currentCode": "T17",
@@ -210,7 +241,9 @@
         "Have we said all this before? ->(Timer{S} ->(T18))"
       ],
       "character": "Gee",
-      "directedTo": "Vee"
+      "directedTo": [
+        "Vee"
+      ]
     },
     {
       "currentCode": "T18",
@@ -219,7 +252,9 @@
         "Only every time. ->(Timer{L} ->(T8))"
       ],
       "character": "Vee",
-      "directedTo": "Gee"
+      "directedTo": [
+        "Gee"
+      ]
     }
   ]
 }

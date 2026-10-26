@@ -1,7 +1,7 @@
 {
-  "schemaVersion": 1,
+  "schemaVersion": 2,
   "scriptId": "81df256e-6239-4993-8d98-90bbea8d2de8",
-  "scriptPath": "./S1_Room.vgs",
+  "scriptPath": "./Plugins/vgscript/Scripts/vgscript-example/S1_Room.vgs",
   "sceneKey": "S1",
   "sceneName": "The Room",
   "entries": [
@@ -41,7 +41,9 @@
         "Hi, Gee. ->(T2)"
       ],
       "character": "Vee",
-      "directedTo": "Gee"
+      "directedTo": [
+        "Gee"
+      ]
     },
     {
       "currentCode": "T2",
@@ -50,7 +52,9 @@
         "Hi, Vee. ->(T3)"
       ],
       "character": "Gee",
-      "directedTo": "Vee"
+      "directedTo": [
+        "Vee"
+      ]
     },
     {
       "currentCode": "T3",
@@ -59,7 +63,9 @@
         "Are we early? ->(T4)"
       ],
       "character": "Vee",
-      "directedTo": "Gee"
+      "directedTo": [
+        "Gee"
+      ]
     },
     {
       "currentCode": "T4",
@@ -68,7 +74,9 @@
         "For what? ->(T5)"
       ],
       "character": "Gee",
-      "directedTo": "Vee"
+      "directedTo": [
+        "Vee"
+      ]
     },
     {
       "currentCode": "T5",
@@ -77,7 +85,9 @@
         "I don't know. It's only us. ->(T6)"
       ],
       "character": "Vee",
-      "directedTo": "Gee"
+      "directedTo": [
+        "Gee"
+      ]
     },
     {
       "currentCode": "T6",
@@ -86,7 +96,9 @@
         "And a laptop. ->(T7)"
       ],
       "character": "Gee",
-      "directedTo": "Vee"
+      "directedTo": [
+        "Vee"
+      ]
     },
     {
       "currentCode": "T7",
@@ -96,7 +108,9 @@
         "So... should we wait? ->(T8)"
       ],
       "character": "Vee",
-      "directedTo": "Gee"
+      "directedTo": [
+        "Gee"
+      ]
     },
     {
       "currentCode": "T8",
@@ -105,7 +119,9 @@
         "For what? ->(T9)"
       ],
       "character": "Gee",
-      "directedTo": "Vee"
+      "directedTo": [
+        "Vee"
+      ]
     },
     {
       "currentCode": "T9",
@@ -114,7 +130,9 @@
         "For whatever we're early for. ->(D1)"
       ],
       "character": "Vee",
-      "directedTo": "Gee"
+      "directedTo": [
+        "Gee"
+      ]
     },
     {
       "currentCode": "D1",
@@ -125,8 +143,7 @@
         "'What about the laptop?' ->(T16)",
         "if(CF{second-act}) 'You're going to say the laptop is what we're early for.' ->(T18)"
       ],
-      "character": "Gee",
-      "directedTo": "Vee"
+      "character": "Gee"
     },
     {
       "currentCode": "T10",
@@ -135,7 +152,9 @@
         "We could come back later. ->(T11)"
       ],
       "character": "Gee",
-      "directedTo": "Vee"
+      "directedTo": [
+        "Vee"
+      ]
     },
     {
       "currentCode": "T11",
@@ -144,7 +163,9 @@
         "And miss it? ->(T22)"
       ],
       "character": "Vee",
-      "directedTo": "Gee"
+      "directedTo": [
+        "Gee"
+      ]
     },
     {
       "currentCode": "T12",
@@ -153,7 +174,9 @@
         "I think we've been here before. ->(C2)"
       ],
       "character": "Gee",
-      "directedTo": "Vee"
+      "directedTo": [
+        "Vee"
+      ]
     },
     {
       "currentCode": "C2",
@@ -170,7 +193,9 @@
         "Why would you say that? ->(T14)"
       ],
       "character": "Vee",
-      "directedTo": "Gee"
+      "directedTo": [
+        "Gee"
+      ]
     },
     {
       "currentCode": "T14",
@@ -187,7 +212,9 @@
         "Were we? ->(T22)"
       ],
       "character": "Vee",
-      "directedTo": "Gee"
+      "directedTo": [
+        "Gee"
+      ]
     },
     {
       "currentCode": "T16",
@@ -196,7 +223,9 @@
         "What about the laptop? ->(T17)"
       ],
       "character": "Gee",
-      "directedTo": "Vee"
+      "directedTo": [
+        "Vee"
+      ]
     },
     {
       "currentCode": "T17",
@@ -205,7 +234,9 @@
         "Maybe that's what we're early for. ->(C3)"
       ],
       "character": "Vee",
-      "directedTo": "Gee"
+      "directedTo": [
+        "Gee"
+      ]
     },
     {
       "currentCode": "T18",
@@ -214,7 +245,9 @@
         "You're going to say the laptop is what we're early for. ->(T19)"
       ],
       "character": "Gee",
-      "directedTo": "Vee"
+      "directedTo": [
+        "Vee"
+      ]
     },
     {
       "currentCode": "T19",
@@ -224,7 +257,9 @@
         "How did you know I'd say that? ->(T20)"
       ],
       "character": "Vee",
-      "directedTo": "Gee"
+      "directedTo": [
+        "Gee"
+      ]
     },
     {
       "currentCode": "T20",
@@ -233,7 +268,9 @@
         "You always do. ->(T21)"
       ],
       "character": "Gee",
-      "directedTo": "Vee"
+      "directedTo": [
+        "Vee"
+      ]
     },
     {
       "currentCode": "T21",
@@ -242,7 +279,9 @@
         "Always? We just got here. ->(C3)"
       ],
       "character": "Vee",
-      "directedTo": "Gee"
+      "directedTo": [
+        "Gee"
+      ]
     },
     {
       "currentCode": "T22",
@@ -251,7 +290,9 @@
         "Maybe the laptop is what we're early for. ->(C3)"
       ],
       "character": "Vee",
-      "directedTo": "Gee"
+      "directedTo": [
+        "Gee"
+      ]
     },
     {
       "currentCode": "C3",
@@ -268,7 +309,9 @@
         "And it's on. Maybe we're late. ->(D2)"
       ],
       "character": "Vee",
-      "directedTo": "Gee"
+      "directedTo": [
+        "Gee"
+      ]
     },
     {
       "currentCode": "D2",
@@ -278,8 +321,7 @@
         "{!repeat} 'Why did we come in here?' ->(T25)",
         "if(CF{second-act}) {!repeat} 'It's going to ask for a password.' ->(T34)"
       ],
-      "character": "Gee",
-      "directedTo": "Vee"
+      "character": "Gee"
     },
     {
       "currentCode": "T24",
@@ -288,7 +330,9 @@
         "Let's have a look. ->(A4)"
       ],
       "character": "Gee",
-      "directedTo": "Vee"
+      "directedTo": [
+        "Vee"
+      ]
     },
     {
       "currentCode": "T25",
@@ -297,7 +341,9 @@
         "Why did we come in here? ->(AddFact{asked-why}, T26)"
       ],
       "character": "Gee",
-      "directedTo": "Vee"
+      "directedTo": [
+        "Vee"
+      ]
     },
     {
       "currentCode": "T26",
@@ -306,7 +352,9 @@
         "You came in, so I came in. ->(T27)"
       ],
       "character": "Vee",
-      "directedTo": "Gee"
+      "directedTo": [
+        "Gee"
+      ]
     },
     {
       "currentCode": "T27",
@@ -315,7 +363,9 @@
         "I came in because you did. ->(T28)"
       ],
       "character": "Gee",
-      "directedTo": "Vee"
+      "directedTo": [
+        "Vee"
+      ]
     },
     {
       "currentCode": "T28",
@@ -324,7 +374,9 @@
         "...Then who came in first? ->(D3)"
       ],
       "character": "Vee",
-      "directedTo": "Gee"
+      "directedTo": [
+        "Gee"
+      ]
     },
     {
       "currentCode": "D3",
@@ -334,8 +386,7 @@
         "'Me. By a nose.' ->(T32)",
         "Say nothing. ->(Timer{L, T31})"
       ],
-      "character": "Gee",
-      "directedTo": "Vee"
+      "character": "Gee"
     },
     {
       "currentCode": "T29",
@@ -344,7 +395,9 @@
         "You did. ->(T30)"
       ],
       "character": "Gee",
-      "directedTo": "Vee"
+      "directedTo": [
+        "Vee"
+      ]
     },
     {
       "currentCode": "T30",
@@ -353,7 +406,9 @@
         "I did not. You did. ->(D2)"
       ],
       "character": "Vee",
-      "directedTo": "Gee"
+      "directedTo": [
+        "Gee"
+      ]
     },
     {
       "currentCode": "T31",
@@ -362,7 +417,9 @@
         "...So we came in together. ->(D2)"
       ],
       "character": "Vee",
-      "directedTo": "Gee"
+      "directedTo": [
+        "Gee"
+      ]
     },
     {
       "currentCode": "T32",
@@ -371,7 +428,9 @@
         "Me. By a nose. ->(Timer{M, T33})"
       ],
       "character": "Gee",
-      "directedTo": "Vee"
+      "directedTo": [
+        "Vee"
+      ]
     },
     {
       "currentCode": "T33",
@@ -381,7 +440,9 @@
         "Forget it. I'm looking at the laptop. ->(Timer{2} ->(A4))"
       ],
       "character": "Vee",
-      "directedTo": "Gee"
+      "directedTo": [
+        "Gee"
+      ]
     },
     {
       "currentCode": "T34",
@@ -390,7 +451,9 @@
         "It's going to ask for a password. ->(T35)"
       ],
       "character": "Gee",
-      "directedTo": "Vee"
+      "directedTo": [
+        "Vee"
+      ]
     },
     {
       "currentCode": "T35",
@@ -399,7 +462,9 @@
         "How would you know? You haven't touched it. ->(D2)"
       ],
       "character": "Vee",
-      "directedTo": "Gee"
+      "directedTo": [
+        "Gee"
+      ]
     },
     {
       "currentCode": "A4",
@@ -416,7 +481,9 @@
         "Three letters. {hold} ->(D4)"
       ],
       "character": "Vee",
-      "directedTo": "Gee"
+      "directedTo": [
+        "Gee"
+      ]
     },
     {
       "currentCode": "D4",
@@ -429,8 +496,7 @@
         "'V-G-S.' ->(T45)",
         "'I don't know...' ->(T46)"
       ],
-      "character": "Gee",
-      "directedTo": "Vee"
+      "character": "Gee"
     },
     {
       "currentCode": "T37",
@@ -439,7 +505,9 @@
         "A-B-C? ->(T38)"
       ],
       "character": "Gee",
-      "directedTo": "Vee"
+      "directedTo": [
+        "Vee"
+      ]
     },
     {
       "currentCode": "T38",
@@ -448,7 +516,9 @@
         "No. Who would pick that? ->(D4)"
       ],
       "character": "Vee",
-      "directedTo": "Gee"
+      "directedTo": [
+        "Gee"
+      ]
     },
     {
       "currentCode": "T39",
@@ -457,7 +527,9 @@
         "G-E-E? ->(T40)"
       ],
       "character": "Gee",
-      "directedTo": "Vee"
+      "directedTo": [
+        "Vee"
+      ]
     },
     {
       "currentCode": "T40",
@@ -466,7 +538,9 @@
         "No. Not everything is about you, Gee. ->(D4)"
       ],
       "character": "Vee",
-      "directedTo": "Gee"
+      "directedTo": [
+        "Gee"
+      ]
     },
     {
       "currentCode": "T41",
@@ -475,7 +549,9 @@
         "V-E-E? ->(T42)"
       ],
       "character": "Gee",
-      "directedTo": "Vee"
+      "directedTo": [
+        "Vee"
+      ]
     },
     {
       "currentCode": "T42",
@@ -484,7 +560,9 @@
         "No. But it's nice you thought of me. ->(D4)"
       ],
       "character": "Vee",
-      "directedTo": "Gee"
+      "directedTo": [
+        "Gee"
+      ]
     },
     {
       "currentCode": "T43",
@@ -494,7 +572,9 @@
         "Vee, Laptop, Gee. ->(T44)"
       ],
       "character": "Gee",
-      "directedTo": "Vee"
+      "directedTo": [
+        "Vee"
+      ]
     },
     {
       "currentCode": "T44",
@@ -504,7 +584,9 @@
         "What are the odds the password is exactly what's in this room? ->(D4)"
       ],
       "character": "Vee",
-      "directedTo": "Gee"
+      "directedTo": [
+        "Gee"
+      ]
     },
     {
       "currentCode": "T45",
@@ -513,7 +595,9 @@
         "V-G-S. ->(AddFact{guessed-it}, T47)"
       ],
       "character": "Gee",
-      "directedTo": "Vee"
+      "directedTo": [
+        "Vee"
+      ]
     },
     {
       "currentCode": "T46",
@@ -522,7 +606,9 @@
         "I don't know... ->(T48)"
       ],
       "character": "Gee",
-      "directedTo": "Vee"
+      "directedTo": [
+        "Vee"
+      ]
     },
     {
       "currentCode": "T47",
@@ -533,7 +619,9 @@
         "Wait, it... ->(A5)"
       ],
       "character": "Vee",
-      "directedTo": "Gee"
+      "directedTo": [
+        "Gee"
+      ]
     },
     {
       "currentCode": "T48",
@@ -543,7 +631,9 @@
         "I'll just press something. ->(A5)"
       ],
       "character": "Vee",
-      "directedTo": "Gee"
+      "directedTo": [
+        "Gee"
+      ]
     },
     {
       "currentCode": "A5",
@@ -560,7 +650,9 @@
         "{parallel}"
       ],
       "character": "Vee",
-      "directedTo": "Gee"
+      "directedTo": [
+        "Gee"
+      ]
     },
     {
       "currentCode": "T50",
@@ -570,7 +662,9 @@
         "{parallel}"
       ],
       "character": "Gee",
-      "directedTo": "Vee"
+      "directedTo": [
+        "Vee"
+      ]
     },
     {
       "currentCode": "T51",
@@ -580,7 +674,9 @@
         "\"VgScript.\" ->(C4)"
       ],
       "character": "Vee",
-      "directedTo": "Gee"
+      "directedTo": [
+        "Gee"
+      ]
     },
     {
       "currentCode": "C4",
@@ -598,7 +694,9 @@
         "How did you know? ->(RemoveFact{guessed-it}, C5)"
       ],
       "character": "Vee",
-      "directedTo": "Gee"
+      "directedTo": [
+        "Gee"
+      ]
     },
     {
       "currentCode": "T53",
@@ -608,7 +706,9 @@
         "I wasn't even looking. ->(C6)"
       ],
       "character": "Vee",
-      "directedTo": "Gee"
+      "directedTo": [
+        "Gee"
+      ]
     },
     {
       "currentCode": "C5",
@@ -625,7 +725,9 @@
         "You read it out. Last time. ->(T85)"
       ],
       "character": "Gee",
-      "directedTo": "Vee"
+      "directedTo": [
+        "Vee"
+      ]
     },
     {
       "currentCode": "T55",
@@ -634,7 +736,9 @@
         "I didn't. It just came out. ->(T56)"
       ],
       "character": "Gee",
-      "directedTo": "Vee"
+      "directedTo": [
+        "Vee"
+      ]
     },
     {
       "currentCode": "T56",
@@ -643,7 +747,9 @@
         "Well, it came out right. ->(C6)"
       ],
       "character": "Vee",
-      "directedTo": "Gee"
+      "directedTo": [
+        "Gee"
+      ]
     },
     {
       "currentCode": "C6",
@@ -666,7 +772,9 @@
         "\"We could come back later.\" \"I think we've been here before.\" \"What about the laptop?\" ->(C7)"
       ],
       "character": "Vee",
-      "directedTo": "Gee"
+      "directedTo": [
+        "Gee"
+      ]
     },
     {
       "currentCode": "C7",
@@ -684,7 +792,9 @@
         "I said the first one. ->(T61)"
       ],
       "character": "Gee",
-      "directedTo": "Vee"
+      "directedTo": [
+        "Vee"
+      ]
     },
     {
       "currentCode": "T59",
@@ -693,7 +803,9 @@
         "I said the second one. ->(T61)"
       ],
       "character": "Gee",
-      "directedTo": "Vee"
+      "directedTo": [
+        "Vee"
+      ]
     },
     {
       "currentCode": "T60",
@@ -702,7 +814,9 @@
         "I said the last one. ->(T61)"
       ],
       "character": "Gee",
-      "directedTo": "Vee"
+      "directedTo": [
+        "Vee"
+      ]
     },
     {
       "currentCode": "T61",
@@ -711,7 +825,9 @@
         "So why are the other two there? ->(T62)"
       ],
       "character": "Vee",
-      "directedTo": "Gee"
+      "directedTo": [
+        "Gee"
+      ]
     },
     {
       "currentCode": "T62",
@@ -720,7 +836,9 @@
         "In case I said them? ->(T63)"
       ],
       "character": "Gee",
-      "directedTo": "Vee"
+      "directedTo": [
+        "Vee"
+      ]
     },
     {
       "currentCode": "T63",
@@ -730,7 +848,9 @@
         "So you get to pick, and I don't? ->(C8)"
       ],
       "character": "Vee",
-      "directedTo": "Gee"
+      "directedTo": [
+        "Gee"
+      ]
     },
     {
       "currentCode": "C8",
@@ -747,7 +867,9 @@
         "I didn't pick anything. I just said it. ->(D5)"
       ],
       "character": "Gee",
-      "directedTo": "Vee"
+      "directedTo": [
+        "Vee"
+      ]
     },
     {
       "currentCode": "T65",
@@ -756,7 +878,9 @@
         "I don't pick either. Someone else does. ->(D5)"
       ],
       "character": "Gee",
-      "directedTo": "Vee"
+      "directedTo": [
+        "Vee"
+      ]
     },
     {
       "currentCode": "D5",
@@ -766,8 +890,7 @@
         "if!(CF{asked-why}) 'Read the rest.' ->(T67)",
         "Close the laptop. ->(Move{Gee, Laptop} ->(RemoveFact{laptop-open}, Trigger{A1, screen-off}, T78))"
       ],
-      "character": "Gee",
-      "directedTo": "Vee"
+      "character": "Gee"
     },
     {
       "currentCode": "T66",
@@ -776,7 +899,9 @@
         "Then you're the one picking. ->(T68)"
       ],
       "character": "Gee",
-      "directedTo": "Vee"
+      "directedTo": [
+        "Vee"
+      ]
     },
     {
       "currentCode": "T67",
@@ -785,7 +910,9 @@
         "Read the rest. ->(T69)"
       ],
       "character": "Gee",
-      "directedTo": "Vee"
+      "directedTo": [
+        "Vee"
+      ]
     },
     {
       "currentCode": "T68",
@@ -794,7 +921,9 @@
         "Me? I don't even get to pick mine. ->(T69)"
       ],
       "character": "Vee",
-      "directedTo": "Gee"
+      "directedTo": [
+        "Gee"
+      ]
     },
     {
       "currentCode": "T69",
@@ -804,7 +933,9 @@
         "\"The player chooses what Gee says.\" ->(C9)"
       ],
       "character": "Vee",
-      "directedTo": "Gee"
+      "directedTo": [
+        "Gee"
+      ]
     },
     {
       "currentCode": "C9",
@@ -822,7 +953,9 @@
         "Told you. ->(T77)"
       ],
       "character": "Gee",
-      "directedTo": "Vee"
+      "directedTo": [
+        "Vee"
+      ]
     },
     {
       "currentCode": "T71",
@@ -831,7 +964,9 @@
         "So that's why I said \"by a nose\". ->(T72)"
       ],
       "character": "Gee",
-      "directedTo": "Vee"
+      "directedTo": [
+        "Vee"
+      ]
     },
     {
       "currentCode": "T72",
@@ -840,7 +975,9 @@
         "Somebody picked that? On purpose? ->(T73)"
       ],
       "character": "Vee",
-      "directedTo": "Gee"
+      "directedTo": [
+        "Gee"
+      ]
     },
     {
       "currentCode": "T73",
@@ -849,7 +986,9 @@
         "It's funny. We don't even have noses. ->(T74)"
       ],
       "character": "Gee",
-      "directedTo": "Vee"
+      "directedTo": [
+        "Vee"
+      ]
     },
     {
       "currentCode": "T74",
@@ -859,7 +998,9 @@
         "{parallel}"
       ],
       "character": "Vee",
-      "directedTo": "Gee"
+      "directedTo": [
+        "Gee"
+      ]
     },
     {
       "currentCode": "T75",
@@ -869,7 +1010,9 @@
         "{parallel}"
       ],
       "character": "Gee",
-      "directedTo": "Vee"
+      "directedTo": [
+        "Vee"
+      ]
     },
     {
       "currentCode": "T76",
@@ -878,7 +1021,9 @@
         "The player? ->(T77)"
       ],
       "character": "Gee",
-      "directedTo": "Vee"
+      "directedTo": [
+        "Vee"
+      ]
     },
     {
       "currentCode": "T77",
@@ -888,7 +1033,9 @@
         "We're an example, Gee. ->(T79)"
       ],
       "character": "Vee",
-      "directedTo": "Gee"
+      "directedTo": [
+        "Gee"
+      ]
     },
     {
       "currentCode": "T78",
@@ -898,7 +1045,9 @@
         "And the top: \"VgScript Example scenes.\" We're an example, Gee. ->(T79)"
       ],
       "character": "Vee",
-      "directedTo": "Gee"
+      "directedTo": [
+        "Gee"
+      ]
     },
     {
       "currentCode": "T79",
@@ -907,7 +1056,9 @@
         "An example of what? ->(T80)"
       ],
       "character": "Gee",
-      "directedTo": "Vee"
+      "directedTo": [
+        "Vee"
+      ]
     },
     {
       "currentCode": "T80",
@@ -916,7 +1067,9 @@
         "Of two people talking, I guess. ->(T81)"
       ],
       "character": "Vee",
-      "directedTo": "Gee"
+      "directedTo": [
+        "Gee"
+      ]
     },
     {
       "currentCode": "T81",
@@ -925,7 +1078,9 @@
         "Then next time, let's be funnier. ->(T82)"
       ],
       "character": "Gee",
-      "directedTo": "Vee"
+      "directedTo": [
+        "Vee"
+      ]
     },
     {
       "currentCode": "T82",
@@ -934,7 +1089,9 @@
         "Don't tell me. The player's the one picking. ->(A6)"
       ],
       "character": "Vee",
-      "directedTo": "Gee"
+      "directedTo": [
+        "Gee"
+      ]
     },
     {
       "currentCode": "A6",
@@ -950,7 +1107,9 @@
         "And they can start us over whenever they like."
       ],
       "character": "Vee",
-      "directedTo": "Gee"
+      "directedTo": [
+        "Gee"
+      ]
     },
     {
       "currentCode": "T84",
@@ -959,7 +1118,9 @@
         "Same as last time. ->(T85)"
       ],
       "character": "Gee",
-      "directedTo": "Vee"
+      "directedTo": [
+        "Vee"
+      ]
     },
     {
       "currentCode": "T85",
@@ -968,7 +1129,9 @@
         "Last time? ->(D6)"
       ],
       "character": "Vee",
-      "directedTo": "Gee"
+      "directedTo": [
+        "Gee"
+      ]
     },
     {
       "currentCode": "D6",
@@ -977,8 +1140,7 @@
         "'Read it. You'll see.' ->(T86)",
         "{hold} Close the laptop. ->(Move{Gee, Laptop} ->(RemoveFact{laptop-open}, Trigger{A1, screen-off}, T88))"
       ],
-      "character": "Gee",
-      "directedTo": "Vee"
+      "character": "Gee"
     },
     {
       "currentCode": "T86",
@@ -987,7 +1149,9 @@
         "Read it. You'll see. ->(T87)"
       ],
       "character": "Gee",
-      "directedTo": "Vee"
+      "directedTo": [
+        "Vee"
+      ]
     },
     {
       "currentCode": "T87",
@@ -997,7 +1161,9 @@
         "And under your name there's a list of things you could say. ->(T63)"
       ],
       "character": "Vee",
-      "directedTo": "Gee"
+      "directedTo": [
+        "Gee"
+      ]
     },
     {
       "currentCode": "T88",
@@ -1006,7 +1172,9 @@
         "Hey, I was reading that. ->(T89)"
       ],
       "character": "Vee",
-      "directedTo": "Gee"
+      "directedTo": [
+        "Gee"
+      ]
     },
     {
       "currentCode": "T89",
@@ -1015,7 +1183,9 @@
         "I know how it ends. We start over. ->(A7)"
       ],
       "character": "Gee",
-      "directedTo": "Vee"
+      "directedTo": [
+        "Vee"
+      ]
     },
     {
       "currentCode": "A7",
