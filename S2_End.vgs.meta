@@ -1,7 +1,7 @@
 {
   "schemaVersion": 2,
   "scriptId": "3474650c-11e9-4c96-89a8-0b11c2d28799",
-  "scriptPath": "./Plugins/vgscript/Scripts/vgscript-example/S2_End.vgs",
+  "scriptPath": "./S2_End.vgs",
   "sceneKey": "S2",
   "sceneName": "The End",
   "entries": [

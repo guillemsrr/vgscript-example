@@ -1,7 +1,7 @@
 {
   "schemaVersion": 2,
   "scriptId": "81df256e-6239-4993-8d98-90bbea8d2de8",
-  "scriptPath": "./Plugins/vgscript/Scripts/vgscript-example/S1_Room.vgs",
+  "scriptPath": "./S1_Room.vgs",
   "sceneKey": "S1",
   "sceneName": "The Room",
   "entries": [

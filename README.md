@@ -31,5 +31,4 @@ You don't need git or any programming knowledge to edit them.
    walk every branch and find loose ends.
 
 The same steps from a terminal: `vgs fix-all .`, `vgs check-all .`,
-`vgs travel .`. In the engine, **Tools → VgScript → Install vgs Command-Line Tool**
-puts `vgs` on your `PATH`.
+`vgs travel .`, with the `vgs` the IDE extensions install on your `PATH`.
