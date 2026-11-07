@@ -21,12 +21,13 @@ You don't need git or any programming knowledge to edit them.
 
 1. Install the free **VgScript** extension for your editor. It's available for
    JetBrains IDEs (Rider, IntelliJ, WebStorm…) and VS Code; see
-   [vgscript.com](https://vgscript.com). Any text editor works too; the extension adds
-   highlighting, live checks and automatic numbering.
+   [vgscript.com](https://vgscript.com). It adds highlighting, live checks and
+   automatic numbering, and it includes `vgs`, the tool that updates the `.meta`
+   files the game engine imports.
 2. Open this folder in that editor and change any `.vgs` file.
 3. Right-click the folder and run **VgScript → Fix + Reconcile All**. It numbers
-   new entries and updates the `.meta` files. Without the extension, the game engine
-   import does this for you.
+   new entries and updates the `.meta` files. The game engine import also does
+   this, with the same `vgs`.
 4. Run **VgScript → Validate** to catch mistakes, and **VgScript → Travel** to
    walk every branch and find loose ends.
 
